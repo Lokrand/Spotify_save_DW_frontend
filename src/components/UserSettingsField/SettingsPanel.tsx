@@ -39,7 +39,6 @@ const SettingsPanel: FC<ISettingsPanel> = ({
     const [FilterDislikesHint, setFilterDislikesHint] = useState(false);
     const [SaveFullPlHint, setSaveFullPlHint] = useState(false);
     const [SendmailHint, setSendmailHint] = useState(false);
-    const [SubmitMessage, setSubmitMessage] = useState('');
     const [autosaveChecked, setAutosaveChecked] = useState(false);
     const [filterDislikesChecked, setFilterDislikesChecked] = useState(false);
     const showHint = (event) => {
@@ -307,10 +306,11 @@ const SettingsPanel: FC<ISettingsPanel> = ({
                             type="datetime-local"
                         />
                     )}
-                    <div className="flex justify-between">
-                        <div>{SubmitMessage}</div>
-                        <Button style="" title="Submit" color="bg-white h-10" />
-                    </div>
+                    <Button
+                        style=""
+                        title="Submit"
+                        color="bg-white h-10 ml-80"
+                    />
                 </form>
                 <div className="flex flex-col gap-y-3">
                     <Button
