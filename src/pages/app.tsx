@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Cookies from 'universal-cookie';
-import { Link } from 'react-router-dom';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Button from '../components/Buttons/BaseButton';
 import BlobButton from '../components/Buttons/BlobButton';
 import * as cookieHandle from '../utils/cookieHandle';
-import BaseButton from '../components/Buttons/BaseButton';
 
 export const App = () => {
     // handle cookies
@@ -34,28 +32,24 @@ export const App = () => {
             <div className="min-h-screen">
                 <header className="flex justify-between">
                     <Header title="Home" />
-                    <div className="mt-4 mr-4">
-                        <Link to="/user/demo_user" className="mr-3">
+                    <div className="mt-4 mr-4 flex">
+                        <div className="mr-3">
                             <Button
                                 style=""
                                 title="Layout Demo"
                                 link="/user/demo_user"
-                                color="bg-yellow-100"
+                                color="bg-white"
                             />
-                        </Link>
-                        <Link to="/help" className="mr-3">
+                        </div>
+                        <div className="mr-3">
                             <Button
                                 style=""
                                 title="Help"
                                 link="/help" //use useNavigate
                                 color="bg-white"
                             />
-                        </Link>
-                        <BaseButton
-                            title="Login"
-                            link="/login"
-                            color="bg-white"
-                        />
+                        </div>
+                        <Button title="Login" link="/login" color="bg-white" />
                     </div>
                 </header>
                 <main className="">
